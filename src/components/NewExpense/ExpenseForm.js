@@ -42,7 +42,7 @@ const ExpenseForm = (props) => {
     event.preventDefault(); //기본요청을 막을 수 있다->페이지 리로드를 막는다
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
     props.onSaveExpenseData(expenseData);
